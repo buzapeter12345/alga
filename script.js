@@ -3,15 +3,17 @@ const solvedAlgorithms = [
     {
         title: "Egyenletes Pakolás",
         description: "",
-        difficulty: "Haladó - Dinamikus Programozás",
+        difficulty: "Haladó",
+        tema: "Dinamikus Programozás",
         link: "https://mester.inf.elte.hu:8181/faces/leiras.xhtml?jfwid=103159e28015d478a1f845c79f98:29", 
         link2: "./pdf/egyenletes_pakolas.pdf",
         link3: "./code/egyenletes_pakolas.py"
     },
     {
         title: "Még dolgozom rajta...",
-        description: "A feladat leírása itt jelenik meg.",
-        difficulty: "Haladó - Dinamikus Programozás",
+        description: "Még dolgozom rajta..",
+        difficulty: "🤔",
+        tema: "🥹",
         link: "", 
         link2: "", 
     },
@@ -45,7 +47,7 @@ function createCard(algorithm) {
     card.innerHTML = `
         <h2 class="card-title">${algorithm.title}</h2>
         <p class="card-difficulty">Nehézség: <strong>${algorithm.difficulty}</strong></p>
-        <p>${algorithm.description}</p>
+        <p class="card-difficulty">Témakör: ${algorithm.tema}</p>
         <div class="card-link">
             ${linksHtml}
         </div>

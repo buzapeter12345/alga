@@ -1,104 +1,119 @@
+/* --- ALAP STÍLUSOK (Modern, sötétebb alap) --- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    /* Világosabb szürke háttér */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9eef2; 
+    color: #2c3e50; /* Sötét, mély szövegszín */
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 header {
-    background-color: #007bff;
+    /* Sötétebb, elegáns fejléc */
+    background-color: #34495e; 
     color: white;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Mélyebb, finomabb árnyék */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
 }
 
 h1 {
     margin: 0;
+    font-weight: 300; /* Vékonyabb font vastagság */
 }
 
+/* --- CARD ELRENDEZÉS --- */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
+    /* Rugalmas, 350px-es minimum szélesség */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 30px; /* Nagyobb térközök */
+    padding: 30px;
+    max-width: 1300px;
+    margin: 30px auto;
+    /* Alulra is adunk paddinget, mivel a footer már nem tartja a helyet */
+    padding-bottom: 60px; 
 }
 
+/* --- CARD STÍLUS (Lágy, lekerekített) --- */
 .algorithm-card {
     background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Lágyabb sarkok */
+    border-radius: 12px; 
+    padding: 25px;
+    /* Enyhe, modern árnyék */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); 
     transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
 }
 
 .algorithm-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px); /* Kiemelkedőbb animáció */
+    /* Erősebb árnyék hoverre */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); 
 }
 
 .card-title {
-    color: #007bff;
+    color: #2980b9; 
     margin-top: 0;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
+    /* Finomabb, vékonyabb elválasztó */
+    border-bottom: 1px solid #bdc3c7; 
+    padding-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: 600;
 }
 
 .card-difficulty {
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #7f8c8d;
 }
 
+/* --- GOMB ELRENDEZÉS --- */
 .card-link {
     display: flex;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+/* Általános gomb stílus */
 .card-link a {
     display: inline-block;
     color: white;
-    padding: 8px 15px;
+    padding: 12px 18px; 
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px; /* Kapszula forma */
     flex-grow: 1;
     text-align: center;
-    font-size: 0.9em;
-    min-width: 100px;
+    font-size: 1em;
+    font-weight: 600;
+    min-width: 80px;
+    transition: background-color 0.3s, box-shadow 0.2s;
 }
 
 /* 1. és 2. Feladat Leírása (Kék gombok) */
 .card-link .task-link {
-    background-color: #007bff; 
+    background-color: #3498db; 
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
 }
 
 .card-link .task-link:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
+    box-shadow: 0 6px 10px rgba(52, 152, 219, 0.4);
 }
 
 /* 3. Kód Megtekintése és Letöltése (Zöld kiemelés) */
 .card-link .download-link {
-    background-color: #28a745; 
-    flex-grow: 2; /* A kód link legyen hangsúlyosabb/szélesebb */
+    background-color: #2ecc71; 
+    flex-grow: 2; 
+    box-shadow: 0 4px 6px rgba(46, 204, 113, 0.4);
 }
 
 .card-link .download-link:hover {
-    background-color: #1e7e34;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #27ae60;
+    box-shadow: 0 6px 10px rgba(46, 204, 113, 0.5);
 }
