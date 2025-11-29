@@ -9,19 +9,12 @@ const solvedAlgorithms = [
         link3: "./code/egyenletes_pakolas.py"
     },
     {
-        title: "Egyenletes pakolás",
+        title: "Még dolgozom rajta...",
         description: "A feladat leírása itt jelenik meg.",
         difficulty: "Haladó - Dinamikus Programozás",
-        link: "https://mester.inf.elte.hu:8181/faces/leiras.xhtml", 
-        link2: "https://github.com/myuser/algos/blob/main/egyenletes_pakolas.py", 
+        link: "", 
+        link2: "", 
     },
-    {
-        title: "Gyorsrendezés (QuickSort)",
-        description: "Implementáld a QuickSort rendezési algoritmust.",
-        difficulty: "Nehéz",
-        link: "https://pl.githost.hu/quicksort-leiras",
-        link2: "https://github.com/myuser/algos/blob/main/quicksort.c", 
-    }
 ];
 
 
