@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.algorithm-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.algorithm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: #007bff;
+    margin-top: 0;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.card-difficulty {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-link {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-link a {
+    display: inline-block;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 0.9em;
+    min-width: 100px;
+}
+
+/* 1. és 2. Feladat Leírása (Kék gombok) */
+.card-link .task-link {
+    background-color: #007bff; 
+}
+
+.card-link .task-link:hover {
+    background-color: #0056b3;
+}
+
+/* 3. Kód Megtekintése és Letöltése (Zöld kiemelés) */
+.card-link .download-link {
+    background-color: #28a745; 
+    flex-grow: 2; /* A kód link legyen hangsúlyosabb/szélesebb */
+}
+
+.card-link .download-link:hover {
+    background-color: #1e7e34;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
