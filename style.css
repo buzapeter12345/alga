@@ -1,27 +1,25 @@
 /* --- ALAP STÍLUSOK (Modern, sötétebb alap) --- */
 body {
-    /* Világosabb szürke háttér */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Új Betűtípus: ROBOTO */
+    font-family: 'Roboto', sans-serif;
     background-color: #e9eef2; 
-    color: #2c3e50; /* Sötét, mély szövegszín */
+    color: #2c3e50; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 header {
-    /* Sötétebb, elegáns fejléc */
     background-color: #34495e; 
     color: white;
     padding: 30px 0;
     text-align: center;
-    /* Mélyebb, finomabb árnyék */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
 }
 
 h1 {
     margin: 0;
-    font-weight: 300; /* Vékonyabb font vastagság */
+    font-weight: 300; 
 }
 
 /* --- CARD ELRENDEZÉS --- */
@@ -29,36 +27,31 @@ h1 {
     display: grid;
     /* Rugalmas, 350px-es minimum szélesség */
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-    gap: 30px; /* Nagyobb térközök */
+    gap: 30px; 
     padding: 30px;
     max-width: 1300px;
-    margin: 30px auto;
-    /* Alulra is adunk paddinget, mivel a footer már nem tartja a helyet */
+    margin: 30px auto; /* A szélesebb nézetnél is középen marad */
     padding-bottom: 60px; 
 }
 
 /* --- CARD STÍLUS (Lágy, lekerekített) --- */
 .algorithm-card {
     background-color: white;
-    /* Lágyabb sarkok */
     border-radius: 12px; 
     padding: 25px;
-    /* Enyhe, modern árnyék */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); 
     transition: transform 0.3s, box-shadow 0.3s;
     border: none;
 }
 
 .algorithm-card:hover {
-    transform: translateY(-8px); /* Kiemelkedőbb animáció */
-    /* Erősebb árnyék hoverre */
+    transform: translateY(-8px); 
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); 
 }
 
 .card-title {
     color: #2980b9; 
     margin-top: 0;
-    /* Finomabb, vékonyabb elválasztó */
     border-bottom: 1px solid #bdc3c7; 
     padding-bottom: 10px;
     font-size: 1.4em;
@@ -86,7 +79,7 @@ h1 {
     color: white;
     padding: 12px 18px; 
     text-decoration: none;
-    border-radius: 25px; /* Kapszula forma */
+    border-radius: 25px; 
     flex-grow: 1;
     text-align: center;
     font-size: 1em;
@@ -116,4 +109,44 @@ h1 {
 .card-link .download-link:hover {
     background-color: #27ae60;
     box-shadow: 0 6px 10px rgba(46, 204, 113, 0.5);
+}
+
+/* ======================================= */
+/* ====== MOBIL OPTIMALIZÁCIÓ (KÖZÉPRE IGAZÍTÁS) ====== */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    /* 1. Kártyák középre igazítása (ez volt a fő probléma) */
+    .card-container {
+        /* Átállítjuk a gridet 1 oszloposra mobil nézetben */
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 20px 15px; /* Kisebb oldalsó padding */
+        /* A kártya szélességét a 90% körüli értékre állítjuk, hogy legyen egy kis hely az oldalán */
+        max-width: 90%; 
+        margin: 20px auto; /* Fő: Ez biztosítja a középre igazítást! */
+    }
+
+    /* 2. Az egyes kártyák méretének optimalizálása */
+    .algorithm-card {
+        /* A kártyák most már a konténer 100%-át töltik ki (kb. 90% a képernyő szélességének) */
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    
+    /* 3. Gombok optimalizálása */
+    .card-link {
+        /* A gombok teljesen kitöltenek minden sort, mivel mobil nézetben kevesebb a hely */
+        flex-direction: column; 
+    }
+    
+    /* A flex-grow-t visszavesszük 1-re, hogy a gombok egyenlő szélességűek legyenek */
+    .card-link a {
+        flex-grow: 1;
+    }
+
+    /* A letöltés gomb is ugyanolyan széles lesz, mint a többi */
+    .card-link .download-link {
+        flex-grow: 1; 
+    }
 }
