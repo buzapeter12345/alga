@@ -10,12 +10,13 @@ const solvedAlgorithms = [
         link3: "./code/egyenletes_pakolas.py"
     },
     {
-        title: "Még dolgozom rajta...",
-        description: "Még dolgozom rajta..",
-        difficulty: "🤔",
-        tema: "🥹",
-        link: "", 
-        link2: "", 
+        title: "Csapatverseny",
+        description: "",
+        difficulty: "Haladó",
+        tema: "Gráfok",
+        link: "https://mester.inf.elte.hu:8181/faces/leiras.xhtml?jfwid=a5d6364e0c638f4929107170bc48:28", 
+        link2: "./pdf/csapatverseny.pdf",
+        link3: "./code/csapatverseny.py"
     },
 ];
 
