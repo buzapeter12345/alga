@@ -75,5 +75,5 @@ def megold():
     print(legjobb_max_terheles)
     print(" ".join(map(str, kezdo_kontener_sorszamok)))
 
-if __name__ == "__main__":
-    megold()
+
+megold()

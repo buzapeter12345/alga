@@ -18,6 +18,15 @@ const solvedAlgorithms = [
         link2: "./pdf/csapatverseny.pdf",
         link3: "./code/csapatverseny.py"
     },
+    {
+        title: "Hosszú állomásszakaszok száma",
+        description: "",
+        difficulty: "Középhaladó",
+        tema: "Villamosjárat",
+        link: "https://mester.inf.elte.hu:8181/faces/leiras.xhtml?jfwid=e527f743dacdbfbe982abf7d9f6e:5", 
+        link2: "./pdf/Hosszu_allomasszakaszok.pdf",
+        link3: "./code/hosszu_allomasok.py"
+    },
 ];
 
 
