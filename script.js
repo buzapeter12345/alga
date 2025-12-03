@@ -27,6 +27,15 @@ const solvedAlgorithms = [
         link2: "./pdf/Hosszu_allomasszakaszok.pdf",
         link3: "./code/hosszu_allomasok.py"
     },
+    {
+        title: "Versenyek győztesei",
+        description: "",
+        difficulty: "Középhaladó",
+        tema: "Tanulmányi verseny",
+        link: "https://mester.inf.elte.hu:8181/faces/leiras.xhtml?jfwid=34bb0c25fef31e85d60628f0d105:28", 
+        link2: "./pdf/versenyekgyoztesei.pdf",
+        link3: "./code/versenyek_gyoztesei.py"
+    },
 ];
 
 
